@@ -266,4 +266,4 @@ Estruture sua resposta de forma organizada, abordando cada dúvida numerada.`;
       </div>
     </div>
   );
-}
+}/* Updated */
