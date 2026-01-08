@@ -1,0 +1,40 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#FFD8C8" rx="40"/>
+  
+  <!-- Notebook paper -->
+  <rect x="30" y="25" width="140" height="150" fill="#FFFEF9" rx="8"/>
+  
+  <!-- Spiral binding holes -->
+  <circle cx="50" cy="30" r="4" fill="#E6B8A8"/>
+  <circle cx="75" cy="30" r="4" fill="#E6B8A8"/>
+  <circle cx="100" cy="30" r="4" fill="#E6B8A8"/>
+  <circle cx="125" cy="30" r="4" fill="#E6B8A8"/>
+  <circle cx="150" cy="30" r="4" fill="#E6B8A8"/>
+  
+  <!-- Ruled lines -->
+  <line x1="40" y1="55" x2="160" y2="55" stroke="#FFE6E6" stroke-width="1.5"/>
+  <line x1="40" y1="75" x2="160" y2="75" stroke="#FFE6E6" stroke-width="1.5"/>
+  <line x1="40" y1="95" x2="160" y2="95" stroke="#FFE6E6" stroke-width="1.5"/>
+  <line x1="40" y1="115" x2="160" y2="115" stroke="#FFE6E6" stroke-width="1.5"/>
+  <line x1="40" y1="135" x2="160" y2="135" stroke="#FFE6E6" stroke-width="1.5"/>
+  
+  <!-- Margin line -->
+  <line x1="45" y1="40" x2="45" y2="165" stroke="#FFC8C8" stroke-width="2"/>
+  
+  <!-- Question mark - stylized -->
+  <path d="M 95 65 Q 95 50, 110 50 Q 125 50, 125 65 Q 125 75, 115 85 L 110 95 L 110 105" 
+        stroke="#FF8E8E" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"/>
+  <circle cx="110" cy="120" r="4" fill="#FF8E8E"/>
+  
+  <!-- Pencil accent -->
+  <g transform="translate(140, 140) rotate(-30)">
+    <rect x="0" y="0" width="8" height="35" fill="#FFD700" rx="2"/>
+    <polygon points="4,35 0,45 8,45" fill="#8B5A5A"/>
+    <rect x="0" y="-5" width="8" height="5" fill="#FF8E8E" rx="1"/>
+  </g>
+</svg>

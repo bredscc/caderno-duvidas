@@ -1,44 +1,40 @@
 # Caderno de Estudos
 
-Uma ferramenta web minimalista para anotar dúvidas durante o estudo sem perder o foco. Organize suas questões e copie tudo de uma vez para buscar explicações depois.
+Aplicação web para registro de dúvidas durante sessões de estudo, permitindo manter o foco no conteúdo principal e esclarecer questões posteriormente.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18.x-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-5.x-646cff.svg)
 
-## O Problema
+## Visão Geral
 
-Você está estudando e surge uma dúvida. Você para para pesquisar no Google, acaba em 10 abas diferentes, perde o foco e esquece onde estava. Isso te soa familiar?
-
-## A Solução
-
-Este caderno digital permite que você **anote rapidamente suas dúvidas sem interromper o fluxo de estudo**. No final da sessão, você pode copiar todas as anotações formatadas e buscar as respostas de uma vez - seja em uma IA, com um professor, ou pesquisando depois.
+Durante o estudo, interrupções para pesquisar dúvidas podem quebrar o fluxo de concentração e dispersar o foco do tema principal. Esta ferramenta permite anotar rapidamente questões que surgem, mantendo-as organizadas para consulta posterior.
 
 ## Funcionalidades
 
-- Interface minimalista inspirada em cadernos físicos
-- Anotação rápida de dúvidas durante o estudo
-- Campo para registrar o assunto que está estudando
-- Numeração automática das anotações
-- Timestamp de cada registro
-- Botão para copiar tudo formatado
-- Visual com linhas de caderno e espiral decorativa
-- Design responsivo para desktop e mobile
+- Registro rápido de dúvidas e anotações
+- Campo para identificação do assunto de estudo
+- Numeração automática das entradas
+- Registro de horário em cada anotação
+- Cópia formatada de todas as anotações
+- Download em formato de texto
+- Interface visual inspirada em cadernos físicos
+- Design responsivo para múltiplos dispositivos
 
-## Tecnologias
+## Tecnologias Utilizadas
 
-- **React 18** - Biblioteca JavaScript
-- **Vite** - Build tool
-- **Tailwind CSS v4** - Estilização
-- **Lucide React** - Ícones
-- **Google Fonts** - Tipografia (Inter + Caveat)
+- **React 18** - Biblioteca JavaScript para interfaces de usuário
+- **Vite** - Ferramenta de build e desenvolvimento
+- **Tailwind CSS v4** - Framework CSS
+- **Lucide React** - Biblioteca de ícones
+- **Google Fonts** - Tipografia customizada
 
 ## Instalação
 
 ```bash
 # Clone o repositório
-git clone https://github.com/bredscc/caderno-duvidas.git
-cd caderno-duvidas
+git clone https://github.com/bredscc/caderno.git
+cd caderno
 
 # Instale as dependências
 npm install
@@ -47,15 +43,15 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173`
+Acesse http://localhost:5173
 
-## Como Usar
+## Uso
 
-1. **Defina o assunto** (opcional) no campo superior
-2. **Anote suas dúvidas** conforme elas surgem durante o estudo
-3. **Continue estudando** - suas anotações ficam salvas na tela
-4. **Copie tudo** ao final usando o botão "Copiar Tudo"
-5. **Cole no Claude.ai, ChatGPT, ou onde preferir** para obter explicações
+1. Informe o assunto de estudo no campo superior (opcional)
+2. Registre dúvidas conforme surgem durante o estudo
+3. Continue com o material principal
+4. Ao final, utilize os botões de copiar ou download
+5. Cole as anotações em assistentes de IA, documentos ou compartilhe com professores
 
 ## Build para Produção
 
@@ -63,76 +59,90 @@ Acesse `http://localhost:5173`
 npm run build
 ```
 
-Os arquivos otimizados estarão na pasta `dist/`
+Os arquivos otimizados serão gerados na pasta `dist/`
 
 ## Deploy
 
-Este projeto está configurado para deploy no GitHub Pages. O arquivo está hospedado em:
-`https://brecketline.me/caderno/`
-
-Para fazer deploy:
+Projeto configurado para GitHub Pages:
 
 ```bash
-# Configure o base no vite.config.js para seu caminho
+# Configure o caminho base no vite.config.js
 base: '/caderno/'
 
-# Build e copie para seu repositório de páginas
+# Execute o build
 npm run build
-cp -r dist/* /caminho/para/seu/github.io/caderno/
+
+# Copie os arquivos para o repositório de páginas
+cp -r dist/* /caminho/para/repositorio/caderno/
 ```
+
+Aplicação disponível em: https://brecketline.me/caderno/
 
 ## Estrutura do Projeto
 
 ```
-caderno-duvidas/
+caderno/
 ├── src/
-│   ├── App.jsx          # Componente principal
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Estilos do Tailwind
-├── public/
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
+│   ├── App.jsx          # Componente principal da aplicação
+│   ├── main.jsx         # Ponto de entrada
+│   └── index.css        # Estilos base do Tailwind
+├── public/              # Arquivos estáticos
+├── package.json         # Dependências e scripts
+├── vite.config.js       # Configuração do Vite
+├── tailwind.config.js   # Configuração do Tailwind
+├── postcss.config.js    # Configuração do PostCSS
 └── README.md
 ```
 
-## Contribuindo
+## Formato de Exportação
 
-Contribuições são bem-vindas! Para contribuir:
+As anotações são exportadas em formato texto estruturado:
 
-1. Faça fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
+```
+CADERNO DE ANOTAÇÕES
+
+Assunto: [Tema de estudo]
+Data: [Data atual]
+
+Anotações:
+1. (HH:MM) [Texto da anotação]
+2. (HH:MM) [Texto da anotação]
+```
+
+## Contribuições
+
+Contribuições são aceitas via pull requests. Para mudanças significativas, abra uma issue primeiro para discussão.
+
+1. Fork o projeto
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/Nova-Funcionalidade`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/Nova-Funcionalidade`)
 5. Abra um Pull Request
 
-## Roadmap
+## Possíveis Melhorias Futuras
 
-Possíveis melhorias futuras:
-
-- [ ] Salvar anotações no localStorage
-- [ ] Categorização de dúvidas por tags
-- [ ] Exportar para PDF ou Markdown
-- [ ] Temas de cores personalizáveis
-- [ ] Modo escuro
-- [ ] Atalhos de teclado adicionais
+- Persistência de dados no navegador
+- Categorização por tags ou etiquetas
+- Modo de visualização escuro
+- Exportação em formato Markdown
+- Sistema de busca nas anotações
+- Estatísticas de uso
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para detalhes.
 
 ## Autor
 
-**Brenda**
+Brenda Cabral Chaves
 
-- GitHub: [@bredscc](https://github.com/bredscc)
 - Website: [brecketline.me](https://brecketline.me)
+- GitHub: [@bredscc](https://github.com/bredscc)
 
-## Agradecimentos
+## Referências
 
-- Comunidade React e Tailwind CSS
+Metodologia baseada em técnicas de estudo focado e gerenciamento de atenção durante o aprendizado.
 
 ---
 
-Desenvolvido com foco em produtividade e aprendizado eficiente
+Desenvolvido com foco em produtividade acadêmica e eficiência no processo de aprendizado.
